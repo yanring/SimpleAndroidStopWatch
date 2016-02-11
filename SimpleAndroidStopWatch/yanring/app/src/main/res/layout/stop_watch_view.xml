@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.example.yanring.a3yanring.StopWatch
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:backgroundColor="@color/colorAccent"
+    android:id="@+id/stop_watch"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/start_click_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/Start_Button"
+        android:background="@null"
+        />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/reset_icon"
+        android:layout_alignTop="@id/Start_Button"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/Record_Button"
+        android:background="@null"
+        />
+
+    <ScrollView
+        android:layout_width="110dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/Record_Button"
+        android:layout_marginBottom="20dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/list_view"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
